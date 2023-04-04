@@ -16,8 +16,8 @@
 		 </script>
     <meta name="description" content="高性能内存级图数据库">
     
-    <link rel="preload" href="/assets/css/0.styles.3d5dd861.css" as="style"><link rel="preload" href="/assets/js/app.52352228.js" as="script"><link rel="preload" href="/assets/js/2.66a1f4fc.js" as="script"><link rel="preload" href="/assets/js/8.23f96a3f.js" as="script"><link rel="prefetch" href="/assets/js/10.554001e5.js"><link rel="prefetch" href="/assets/js/11.8a417a35.js"><link rel="prefetch" href="/assets/js/12.d4c1f420.js"><link rel="prefetch" href="/assets/js/13.fe11edb4.js"><link rel="prefetch" href="/assets/js/3.2707812c.js"><link rel="prefetch" href="/assets/js/4.7a878f80.js"><link rel="prefetch" href="/assets/js/5.5c2686c8.js"><link rel="prefetch" href="/assets/js/6.2c5e1b74.js"><link rel="prefetch" href="/assets/js/7.701af8f3.js"><link rel="prefetch" href="/assets/js/9.a7643237.js">
-    <link rel="stylesheet" href="/assets/css/0.styles.3d5dd861.css">
+    <link rel="preload" href="/assets/css/0.styles.576ebed1.css" as="style"><link rel="preload" href="/assets/js/app.2089df74.js" as="script"><link rel="preload" href="/assets/js/2.66a1f4fc.js" as="script"><link rel="preload" href="/assets/js/8.62cf284e.js" as="script"><link rel="prefetch" href="/assets/js/10.de074fa1.js"><link rel="prefetch" href="/assets/js/11.a31950e3.js"><link rel="prefetch" href="/assets/js/12.27ece16e.js"><link rel="prefetch" href="/assets/js/13.241af913.js"><link rel="prefetch" href="/assets/js/3.2707812c.js"><link rel="prefetch" href="/assets/js/4.fea0a3d6.js"><link rel="prefetch" href="/assets/js/5.93b4a2a5.js"><link rel="prefetch" href="/assets/js/6.2c5e1b74.js"><link rel="prefetch" href="/assets/js/7.42a92542.js"><link rel="prefetch" href="/assets/js/9.41e85504.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.576ebed1.css">
   </head>
   <body>
     <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">NeuroDB</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
@@ -594,28 +594,7 @@ namespace Test
         }
     }
 }
-</code></pre></div><p>resultSet结果集对象数据结构见<a href="#驱动对象结果集resultset数据结构">驱动对象结果集ResultSet数据结构</a></p> <h3 id="驱动对象结果集resultset数据结构"><a href="#驱动对象结果集resultset数据结构" class="header-anchor">#</a> 驱动对象结果集ResultSet数据结构</h3> <h4 id="resultset-返回结果数据结构"><a href="#resultset-返回结果数据结构" class="header-anchor">#</a> ResultSet 返回结果数据结构：</h4> <p>&quot;cursor&quot;:指令解析指针（如果有语法错误则指针索引不指向最后一个字符）
-&quot;status&quot;: 状态&quot;OK&quot;为成功返回，否则提示ERROR信息,
-&quot;msg&quot;: &quot;运行成功&quot; 附属信息,
-&quot;results&quot;:  结果集中结果记录的个数,
-&quot;addNodes&quot;: 添加节点个数,
-&quot;addLinks&quot;: 添加关系边个数,
-&quot;modifyNodes&quot;: 修改节点个数,
-&quot;modifyLinks&quot;: 修改关系边个数,
-&quot;deleteNodes&quot;: 删除节点个数,
-&quot;deleteLinks&quot;: 删除关系边个数,
-&quot;recordSet&quot;：结果集</p> <h4 id="recordset-结果集内数据结构"><a href="#recordset-结果集内数据结构" class="header-anchor">#</a> &quot;recordSet&quot;：结果集内数据结构：</h4> <p>&quot;labels&quot;:结果集中所有节点的label标签集合
-&quot;types&quot;:结果集中所有关系边的type类型集合
-&quot;keyNames&quot;:结果集中所有节点、关系边的属性名集合
-&quot;nodes&quot;:结果集内所有节点
-&quot;links&quot;:结果集内所有关系边
-&quot;records&quot;:结果集按Return指令后变量排列顺序排列的节点、关系边、路径 组成的结果记录列表</p> <h4 id="node-节点数据结构"><a href="#node-节点数据结构" class="header-anchor">#</a> &quot;node&quot;节点数据结构</h4> <p>&quot;id&quot;:节点id
-&quot;labels&quot;:节点标签数组
-&quot;properties&quot;:属性列表，每个属性包含属性名、属性值</p> <h4 id="link-关系边数据结构"><a href="#link-关系边数据结构" class="header-anchor">#</a> &quot;link&quot;关系边数据结构</h4> <p>&quot;id&quot;:关系边id
-&quot;hid&quot;:头结点id
-&quot;tid&quot;: 尾节点id
-&quot;type&quot;: 关系边类型
-&quot;properties&quot;:属性列表，每个属性包含属性名、属性值</p> <h4 id="resultset实例-以json展示"><a href="#resultset实例-以json展示" class="header-anchor">#</a> ResultSet实例（以JSON展示）</h4> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token punctuation">{</span>
+</code></pre></div><p>resultSet结果集对象数据结构见<a href="#驱动对象结果集resultset数据结构">驱动对象结果集ResultSet数据结构</a></p> <h3 id="驱动对象结果集resultset数据结构"><a href="#驱动对象结果集resultset数据结构" class="header-anchor">#</a> 驱动对象结果集ResultSet数据结构</h3> <h4 id="resultset-返回结果数据结构"><a href="#resultset-返回结果数据结构" class="header-anchor">#</a> ResultSet 返回结果数据结构：</h4> <ul><li>&quot;cursor&quot;:指令解析指针（如果有语法错误则指针索引不指向最后一个字符）</li> <li>&quot;status&quot;: 状态&quot;OK&quot;为成功返回，否则提示ERROR信息,</li> <li>&quot;msg&quot;: &quot;运行成功&quot; 附属信息,</li> <li>&quot;results&quot;:  结果集中结果记录的个数,</li> <li>&quot;addNodes&quot;: 添加节点个数,</li> <li>&quot;addLinks&quot;: 添加关系边个数,</li> <li>&quot;modifyNodes&quot;: 修改节点个数,</li> <li>&quot;modifyLinks&quot;: 修改关系边个数,</li> <li>&quot;deleteNodes&quot;: 删除节点个数,</li> <li>&quot;deleteLinks&quot;: 删除关系边个数,</li> <li>&quot;recordSet&quot;：结果集</li></ul> <h4 id="recordset-结果集内数据结构"><a href="#recordset-结果集内数据结构" class="header-anchor">#</a> &quot;recordSet&quot;：结果集内数据结构：</h4> <ul><li>&quot;labels&quot;:结果集中所有节点的label标签集合</li> <li>&quot;types&quot;:结果集中所有关系边的type类型集合</li> <li>&quot;keyNames&quot;:结果集中所有节点、关系边的属性名集合</li> <li>&quot;nodes&quot;:结果集内所有节点</li> <li>&quot;links&quot;:结果集内所有关系边</li> <li>&quot;records&quot;:结果集按Return指令后变量排列顺序排列的节点、关系边、路径 组成的结果记录列表</li></ul> <h4 id="node-节点数据结构"><a href="#node-节点数据结构" class="header-anchor">#</a> &quot;node&quot;节点数据结构</h4> <ul><li>&quot;id&quot;:节点id</li> <li>&quot;labels&quot;:节点标签数组</li> <li>&quot;properties&quot;:属性列表，每个属性包含属性名、属性值</li></ul> <h4 id="link-关系边数据结构"><a href="#link-关系边数据结构" class="header-anchor">#</a> &quot;link&quot;关系边数据结构</h4> <ul><li>&quot;id&quot;:关系边id</li> <li>&quot;hid&quot;:头结点id</li> <li>&quot;tid&quot;: 尾节点id</li> <li>&quot;type&quot;: 关系边类型</li> <li>&quot;properties&quot;:属性列表，每个属性包含属性名、属性值</li></ul> <h4 id="resultset实例-以json展示"><a href="#resultset实例-以json展示" class="header-anchor">#</a> ResultSet实例（以JSON展示）</h4> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token punctuation">{</span>
     <span class="token string-property property">&quot;cursor&quot;</span><span class="token operator">:</span> <span class="token number">39</span><span class="token punctuation">,</span>
     <span class="token string-property property">&quot;status&quot;</span><span class="token operator">:</span> <span class="token string">&quot;OK&quot;</span><span class="token punctuation">,</span>
     <span class="token string-property property">&quot;msg&quot;</span><span class="token operator">:</span> <span class="token string">&quot;运行成功&quot;</span><span class="token punctuation">,</span>
@@ -701,6 +680,6 @@ namespace Test
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre></div><h2 id="内嵌式数据库软件包"><a href="#内嵌式数据库软件包" class="header-anchor">#</a> 内嵌式数据库软件包</h2> <h3 id="javascript"><a href="#javascript" class="header-anchor">#</a> JavaScript</h3> <h3 id="java"><a href="#java" class="header-anchor">#</a> java</h3> <h3 id="python"><a href="#python" class="header-anchor">#</a> python</h3> <h3 id="c"><a href="#c" class="header-anchor">#</a> C#</h3> <h3 id="c-c"><a href="#c-c" class="header-anchor">#</a> c/c++</h3></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
-    <script src="/assets/js/app.52352228.js" defer></script><script src="/assets/js/2.66a1f4fc.js" defer></script><script src="/assets/js/8.23f96a3f.js" defer></script>
+    <script src="/assets/js/app.2089df74.js" defer></script><script src="/assets/js/2.66a1f4fc.js" defer></script><script src="/assets/js/8.62cf284e.js" defer></script>
   </body>
 </html>
